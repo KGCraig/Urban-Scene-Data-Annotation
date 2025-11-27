@@ -6,9 +6,9 @@
 
 This project focuses on creating a robust dataset for training AI models to detect various objects in an urban environment. Four types of annotation are applied:
 
-- Cars and pedestrians are labeled using **instance segmentation** so models can distinguish between individual instances.
+- Cars and pedestrians are labeled using **instance segmentation**, so models can distinguish between individual instances.
 
-- Road surfaces are labeled using **semantic segmentation** because models only need to classify every pixel as a road or not a road, and individual road segments to not require a unique ID.
+- Road surfaces are labeled using **semantic segmentation** because models only need to classify every pixel as a road or not a road, and individual road segments do not require a unique ID.
 
 - Traffic signs use **bounding boxes** because they are typically small, and the model mainly needs to know location and class of signs. This also increases the speed and efficiency of annotating an image.
 
@@ -18,7 +18,7 @@ By using multiple types of annotation, I cover a wide variety of use cases and c
 
 ## Dataset Description
 
-The dataset comprises of 20 images downloaded from the royalty-free website Unsplash. The images represent a mixture of daytime and nighttime scenes, as well as different weather conditions such as cloudy and rainy. The primary objects of interest are cars, pedstrians, road surfaces and traffic signs.
+The dataset consists of 20 images downloaded from the royalty-free website Unsplash. The images represent a mixture of daytime and nighttime scenes, as well as different weather conditions, such as cloudy and rainy. The primary objects of interest are cars, pedestrians, road surfaces and traffic signs.
 
 ## Annotation Methodology
 
@@ -29,12 +29,12 @@ A tight approach was used for mask annotations to minimize over-segmentation. Ma
 Strict guidelines were created and adhered to ensure high-quality annotations and to remove ambiguity and guesswork from the project. Each image was double-checked against the guidelines after completion to ensure annotation quality.
 
 - **Example 1: Occlusion** - Guidelines were established for handling occluded objects. Objects that were less than 25% visible were not annotated.
-- **Example 2: Relections and Shadows** - Addresses whether to annotate shadows and reflections.
+- **Example 2: Reflections and Shadows** - Addresses whether to annotate shadows and reflections.
 - **Example 3: Reducing Ambiguity** - Defines what rules to follow for ambiguous objects.
 
 Guidelines can be found here: [Guidelines.pdf](guidelines.pdf)
 
-Since CVAT.ai lacked a way to measure the size of masks, I developed a QA workaround by using a temporary bounding box to measure adherence to minimum size guidelines. This bounding box was wrapped around object that appeared very small. If the object did not pass size guidelines, they were not annotated.
+Since CVAT.ai lacked a way to measure the size of masks, I developed a QA workaround by using a temporary bounding box to measure adherence to minimum size guidelines. This bounding box was wrapped around an object that appeared very small. If the object did not pass size guidelines, they were not annotated.
 
 After the annotations were complete, they were exported from CVAT.ai into the **CVAT for Images 1.1 (XML)** format to be processed in Python to gather statistics.
 
@@ -94,10 +94,10 @@ Full annotations file: [annotations.xml](annotations.xml)
 
 The data displays a significant class imbalance between `CAR` (161 instances) and `PEDESTRIAN` (65 instances).
 
-This imbalance is documented as a key data characteristic that may require model training techniques (e.g. re-weighting or oversampling) to preveint bias towards the `CAR` class.
+This imbalance is documented as a key data characteristic that may require model training techniques (e.g., re-weighting or oversampling) to prevent bias towards the `CAR` class.
 
 ## Conclusion
 
 This project successfully created a high-quality labeled dataset that can be applied to object detection AI models.
 
-Future work should focus on actively balancing the dataset by sourcing scenes with a higher density of currently underrepresented classes. The dataset  should also be expanded to include other common urban classes such as buses, bicycles and motorcycles to increase the model's ability to identify a broader range of real-world urban objects.
+Future work should focus on actively balancing the dataset by sourcing scenes with a higher density of currently underrepresented classes. The dataset should also be expanded to include other common urban classes such as buses, bicycles and motorcycles to increase the model's ability to identify a broader range of real-world urban objects.
