@@ -7,7 +7,7 @@
 |Class Name|Class Definition|Annotation Type|
 |---|---|---|
 |`CAR`|Any sedan, truck, van, or SUV.|Instance Segmentation (Mask)|
-|`PEDESTRIAN`|Any human present (adults//teenagers/children).|Instance Segmentation (Mask)|
+|`PEDESTRIAN`|Any human present (adults/teenagers/children).|Instance Segmentation (Mask)|
 |`ROAD_SURFACE`|The drivable portion of the street, curb to curb.|Semantic Segmentation (Mask)|
 |`TRAFFIC_SIGN`|Any permanent street sign.|Bounding Box|
 
