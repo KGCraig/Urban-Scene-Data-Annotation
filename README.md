@@ -1,22 +1,26 @@
 # Urban Scene Data Annotation
 
+<img src="images/overlay/neyda-arroyo-gomez-1qvJ3Vsit0o-unsplash_overlay.jpg" alt="example" width="250">
+
+A training-ready, multi-label urban annotation dataset created with CVAT.ai. Includes instance and semantic segmentation, bounding boxes, and attributes for occlusion and truncation.
+
 ## Table of Contents
 
 - [Urban Scene Data Annotation](#urban-scene-data-annotation)
-  - [Table of Contents](#table-of-contents)
-  - [Summary](#summary)
-  - [Skills Demonstrated](#skills-demonstrated)
-  - [Goal](#goal)
-  - [Project Background](#project-background)
-  - [Dataset Overview](#dataset-overview)
-  - [Annotation Methodology](#annotation-methodology)
-  - [Guidelines](#guidelines)
-  - [QA (Quality Assurance)](#qa-quality-assurance)
-  - [Visual Example](#visual-example)
-  - [Data Deliverable (.xml)](#data-deliverable-xml)
-  - [Results](#results)
-  - [Challenges](#challenges)
-  - [Conclusion](#conclusion)
+- [Table of Contents](#table-of-contents)
+- [Summary](#summary)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Goal](#goal)
+- [Project Background](#project-background)
+- [Dataset Overview](#dataset-overview)
+- [Annotation Methodology](#annotation-methodology)
+- [Guidelines](#guidelines)
+- [QA (Quality Assurance)](#qa-quality-assurance)
+- [Visual Example](#visual-example)
+- [Data Deliverable (.xml)](#data-deliverable-xml)
+- [Results](#results)
+- [Challenges](#challenges)
+- [Conclusion](#conclusion)
 
 ## Summary
 
